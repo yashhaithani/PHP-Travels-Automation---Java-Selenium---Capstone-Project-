@@ -1,0 +1,1282 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title></title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+        <a href="#!" class="brand-logo black"><img src="http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'></span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Sep 8, 2025 06:37:18 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@order4</a></li>
+					<li><a href='#'>@order1</a></li>
+					<li><a href='#'>@order3</a></li>
+					<li><a href='#'>@order2</a></li>
+					<li><a href='#'>@search</a></li>
+					<li><a href='#'>@positive</a></li>
+					<li><a href='#'>@negative</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Features</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='$66%'>
+                    <span class='strong'>2</span> features passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='33%'>
+                    1</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Scenarios</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='75%'>
+                    <span class='strong'>3</span> scenarios passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='25%'>
+                    1</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='grandchild-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='93%'>
+                    <span class='strong'>55</span> steps passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='1%'>
+                    1</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='5%'>
+                    3</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>User Registration Functionality</span>
+						<span class='test-time'>Sep 8, 2025 06:37:18 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'> As a user I want to
+ Register on the Application 
+ So that I can Book Flight Tickets</div>
+
+<div class='scenario node' test-id='2' status='pass'>
+
+	<span class='duration right label'>00 00 55.921</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Register new user with valid details</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@order1</span>
+				<span class='category label'>@positive</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='5' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_is_on_the_page(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on the "Sign Up" Page</div>
+
+
+		</li>
+		<li test-id='6' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded1.png' src='test-output/embedded1.png'>
+					</div>
+		</li>
+		<li test-id='7' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_enters_first_name_under_sign_up(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user enters First Name "Karan" under Sign up</div>
+
+
+		</li>
+		<li test-id='8' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded2.png' src='test-output/embedded2.png'>
+					</div>
+		</li>
+		<li test-id='9' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_enters_last_name_under_sign_up(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters Last Name "Rawat" under Sign up</div>
+
+
+		</li>
+		<li test-id='10' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded3.png' src='test-output/embedded3.png'>
+					</div>
+		</li>
+		<li test-id='11' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_selects_select_country_under_sign_up(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user selects Select Country "United States +1" under Sign up</div>
+
+
+		</li>
+		<li test-id='12' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded4.png' src='test-output/embedded4.png'>
+					</div>
+		</li>
+		<li test-id='13' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_enters_phone_under_sign_up(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters Phone "7777777777" under Sign up</div>
+
+
+		</li>
+		<li test-id='14' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded5.png' src='test-output/embedded5.png'>
+					</div>
+		</li>
+		<li test-id='15' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_enters_email_address_under_sign_up(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters EmailAddress "karan@gmail.com" under Sign up</div>
+
+
+		</li>
+		<li test-id='16' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded6.png' src='test-output/embedded6.png'>
+					</div>
+		</li>
+		<li test-id='17' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_enters_password_under_sign_up(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters Password "karan123" under Sign up</div>
+
+
+		</li>
+		<li test-id='18' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded7.png' src='test-output/embedded7.png'>
+					</div>
+		</li>
+		<li test-id='19' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_solves_captcha_manually())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user solves captcha manually</div>
+
+
+		</li>
+		<li test-id='20' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded8.png' src='test-output/embedded8.png'>
+					</div>
+		</li>
+		<li test-id='21' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_clicks_sign_up_button_under_sign_up())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks Sign up button under Sign up</div>
+
+
+		</li>
+		<li test-id='22' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded9.png' src='test-output/embedded9.png'>
+					</div>
+		</li>
+		<li test-id='23' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.the_user_should_be_registered_successfully_under_sign_up())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user should be registered Successfully under Sign up</div>
+
+
+		</li>
+		<li test-id='24' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded10.png' src='test-output/embedded10.png'>
+					</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='26' status='pass'>
+
+	<span class='duration right label'>00 00 28.197</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Registration fails with invalid email format</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@order2</span>
+				<span class='category label'>@negative</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='29' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_is_on_the_page(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on the "Sign Up" Page</div>
+
+
+		</li>
+		<li test-id='30' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded11.png' src='test-output/embedded11.png'>
+					</div>
+		</li>
+		<li test-id='31' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_enters_first_name_under_sign_up(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user enters First Name "Ravi" under Sign up</div>
+
+
+		</li>
+		<li test-id='32' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded12.png' src='test-output/embedded12.png'>
+					</div>
+		</li>
+		<li test-id='33' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_enters_last_name_under_sign_up(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters Last Name " " under Sign up</div>
+
+
+		</li>
+		<li test-id='34' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded13.png' src='test-output/embedded13.png'>
+					</div>
+		</li>
+		<li test-id='35' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_selects_select_country_under_sign_up(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user selects Select Country "United States +1" under Sign up</div>
+
+
+		</li>
+		<li test-id='36' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded14.png' src='test-output/embedded14.png'>
+					</div>
+		</li>
+		<li test-id='37' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_enters_phone_under_sign_up(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters Phone " " under Sign up</div>
+
+
+		</li>
+		<li test-id='38' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded15.png' src='test-output/embedded15.png'>
+					</div>
+		</li>
+		<li test-id='39' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_enters_email_address_under_sign_up(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters EmailAddress "ravi@gmail.com" under Sign up</div>
+
+
+		</li>
+		<li test-id='40' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded16.png' src='test-output/embedded16.png'>
+					</div>
+		</li>
+		<li test-id='41' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_enters_password_under_sign_up(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters Password "ravi123" under Sign up</div>
+
+
+		</li>
+		<li test-id='42' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded17.png' src='test-output/embedded17.png'>
+					</div>
+		</li>
+		<li test-id='43' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_solves_captcha_manually())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user solves captcha manually</div>
+
+
+		</li>
+		<li test-id='44' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded18.png' src='test-output/embedded18.png'>
+					</div>
+		</li>
+		<li test-id='45' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_clicks_sign_up_button_under_sign_up())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks Sign up button under Sign up</div>
+
+
+		</li>
+		<li test-id='46' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded19.png' src='test-output/embedded19.png'>
+					</div>
+		</li>
+		<li test-id='47' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.RegistrationPageStepsPositive.user_should_not_be_registered())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should not be registered</div>
+
+
+		</li>
+		<li test-id='48' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded20.png' src='test-output/embedded20.png'>
+					</div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='50'>
+					<div class='test-heading'>
+						<span class='test-name'>Flight Search and Booking</span>
+						<span class='test-time'>Sep 8, 2025 06:38:42 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'>  As a registered user
+  I want to search and book flights
+  So that I can travel to my destination</div>
+
+<div class='scenario node' test-id='51' status='pass'>
+
+	<span class='duration right label'>00 01 39.854</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Search flights with valid details</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@search</span>
+				<span class='category label'>@order3</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='54' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.FlightBookingSteps.user_is_logged_in_and_redirected_to(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is registered and redirected to "Dashboard"</div>
+
+
+		</li>
+		<li test-id='55' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded21.png' src='test-output/embedded21.png'>
+					</div>
+		</li>
+		<li test-id='56' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.FlightBookingSteps.user_navigates_to_section(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user navigates to "Flights" section</div>
+
+
+		</li>
+		<li test-id='57' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded22.png' src='test-output/embedded22.png'>
+					</div>
+		</li>
+		<li test-id='58' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.FlightBookingSteps.user_searches_flight_from_to_with_departure(java.lang.String,java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user searches flight from "DEL" to "BLR" with departure "20-09-2025"</div>
+
+
+		</li>
+		<li test-id='59' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded23.png' src='test-output/embedded23.png'>
+					</div>
+		</li>
+		<li test-id='60' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.FlightBookingSteps.user_selects_the_first_flight_available())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user selects the first flight available</div>
+
+
+		</li>
+		<li test-id='61' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded24.png' src='test-output/embedded24.png'>
+					</div>
+		</li>
+		<li test-id='62' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.FlightBookingSteps.user_fill_the_passenger_and_traveler_details())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user fill the passenger and traveler details</div>
+
+
+		</li>
+		<li test-id='63' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded25.png' src='test-output/embedded25.png'>
+					</div>
+		</li>
+		<li test-id='64' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.FlightBookingSteps.user_should_see_booking_confirmation())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should see booking confirmation</div>
+
+
+		</li>
+		<li test-id='65' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded26.png' src='test-output/embedded26.png'>
+					</div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='67'>
+					<div class='test-heading'>
+						<span class='test-name'>Payment failure simulation</span>
+						<span class='test-time'>Sep 8, 2025 06:40:22 PM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='68' status='fail'>
+
+	<span class='duration right label'>00 00 14.228</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Negative - Payment Gateway failure (PayPal)</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@negative</span>
+				<span class='category label'>@order4</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='71' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinition.PaymentPageSteps.onInvoicePage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on the Invoice page</div>
+
+
+		</li>
+		<li test-id='72' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded27.png' src='test-output/embedded27.png'>
+					</div>
+		</li>
+		<li test-id='73' class='node when Fail' status='Fail'>
+			<div class="step-name" title="(stepDefinition.PaymentPageSteps.proceedPayment())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When user proceeds to PayPal payment</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#form"}
+  (Session info: chrome=139.0.7258.155)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [043b8732772bfdb575f5d79ed718d335, findElement {using=id, value=form}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\yasha\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61356}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61356/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 043b8732772bfdb575f5d79ed718d335
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at stepDefinition.PaymentPageSteps.proceedPayment(PaymentPageSteps.java:35)
+	at ✽.user proceeds to PayPal payment(file:///C:/Users/yasha/Downloads/Capstone/PhpTravels/src/test/resources/features/03_PaymentGatewayfailure.feature:5)
+</textarea>
+		</li>
+		<li test-id='74' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>hooks.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">Step Screenshot</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='test-output/embedded28.png' src='test-output/embedded28.png'>
+					</div>
+		</li>
+		<li test-id='75' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And user chooses "Pay with Debit/Credit Card"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='77' class='node and Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And user enters invalid card details</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='79' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then payment should fail and booking must not be confirmed</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@order4</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 8, 2025 06:40:22 PM</td>
+										<td class='linked' test-id='68'>Negative - Payment Gateway failure (PayPal)</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@order1</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 8, 2025 06:37:18 PM</td>
+										<td class='linked' test-id='2'>Register new user with valid details</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@order3</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 8, 2025 06:38:42 PM</td>
+										<td class='linked' test-id='51'>Search flights with valid details</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@order2</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 8, 2025 06:38:14 PM</td>
+										<td class='linked' test-id='26'>Registration fails with invalid email format</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@search</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 8, 2025 06:38:42 PM</td>
+										<td class='linked' test-id='51'>Search flights with valid details</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@positive</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 8, 2025 06:37:18 PM</td>
+										<td class='linked' test-id='2'>Register new user with valid details</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@negative</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 8, 2025 06:38:14 PM</td>
+										<td class='linked' test-id='26'>Registration fails with invalid email format</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 8, 2025 06:40:22 PM</td>
+										<td class='linked' test-id='68'>Negative - Payment Gateway failure (PayPal)</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 8, 2025 06:40:26 PM</td>
+										<td class='linked' test-id='73'>When user proceeds to PayPal payment</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#form"}
+  (Session info: chrome=139.0.7258.155)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [043b8732772bfdb575f5d79ed718d335, findElement {using=id, value=form}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\yasha\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61356}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61356/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 043b8732772bfdb575f5d79ed718d335
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at stepDefinition.PaymentPageSteps.proceedPayment(PaymentPageSteps.java:35)
+	at ✽.user proceeds to PayPal payment(file:///C:/Users/yasha/Downloads/Capstone/PhpTravels/src/test/resources/features/03_PaymentGatewayfailure.feature:5)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>3</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>4</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>59</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Sep 8, 2025 06:37:18 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Sep 8, 2025 06:40:38 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>00 03 19.923</div>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Skipped</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@order4</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@order1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@order3</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@order2</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@search</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@positive</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@negative</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									50%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 3,
+				passParent: 2,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				childCount: 4,
+				passChild: 3,
+				failChild: 1,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				grandChildCount: 59,
+				passGrandChild: 55,
+				failGrandChild: 1,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 3,
+				infoGrandChild: 0,
+			};
+			</script>
+		
+		<script>
+			var timeline = {
+			        "User Registration Functionality":84.137,"Flight Search and Booking":99.854,"Payment failure simulation":14.228
+			};
+		</script>
+		
+		  <script src='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		
+		
+		<script type='text/javascript'>
+				
+		</script> 
+
+	</body>
+</html>
